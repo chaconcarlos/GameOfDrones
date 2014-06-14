@@ -136,12 +136,15 @@
     <value>The move '{0}' doesn't exists.</value>
   </data>
   <data name="PlayEmptyMoveNameError" xml:space="preserve">
-    <value>The name of the can't be empty.</value>
+    <value>The name of the move can't be empty.</value>
   </data>
   <data name="PlayerNameEmptyError" xml:space="preserve">
     <value>The player name can't be empty.</value>
   </data>
   <data name="PlayResultNotSupported" xml:space="preserve">
     <value>The PlayResult is not supported by this implementation of Game Of Drones.</value>
+  </data>
+  <data name="PlayHasWinnerError" xml:space="preserve">
+    <value>The game already has winner.</value>
   </data>
 </root>

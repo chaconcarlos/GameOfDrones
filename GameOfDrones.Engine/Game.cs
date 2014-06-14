@@ -90,25 +90,65 @@ namespace GameOfDrones.Engine
       this.m_rules       = rules;
     }
 
-    public void Play(string player1MoveName, string player2MoveName)
+    /// <summary>
+    /// Makes a play in the current game.
+    /// </summary>
+    /// <param name="player1MoveName">The player 1's move.</param>
+    /// <param name="player2MoveName">The player 2's move.</param>
+    /// <returns>The name of the player that won the play.
+    /// If there is a Draw, returns empty.</returns>
+    public string Play(string player1MoveName, string player2MoveName)
     {
+      if (this.HasWinner())
+        throw new InvalidOperationException(GameEngineMessages.PlayHasWinnerError);
+
+      if ((string.IsNullOrEmpty(player1MoveName)) || (string.IsNullOrEmpty(player2MoveName)))
+        throw new ArgumentException(GameEngineMessages.PlayEmptyMoveNameError);
+
       Move player1Move  = Rules.GetMove(player1MoveName);
       PlayResult result = player1Move.Play(player2MoveName);
 
       switch (result)
       {
         case PlayResult.Draw:
-          break;
+          return string.Empty;
         case PlayResult.Win:
           m_scorePlayer1++;
-          break;
+          return Player1Name;
         case PlayResult.Lose:
           m_scorePlayer2++;
-          break;
+          return Player2Name;
         default:
           throw new NotSupportedException(GameEngineMessages.PlayResultNotSupported);
-          break;
       }
+    }
+
+    /// <summary>
+    /// Verifies if the current game has a winner.
+    /// </summary>
+    /// <returns>True, if the game has a winner. Otherwise, false.</returns>
+    public bool HasWinner()
+    {
+      if ((ScorePlayer1 == this.Rules.MaxWins) || (ScorePlayer2 == this.Rules.MaxWins))
+        return true;
+
+      return false;
+    }
+
+    /// <summary>
+    /// Returns the name of the winner.
+    /// </summary>
+    /// <returns>The name of the winner. If there is no winner yet,
+    /// returns empty.</returns>
+    public string getWinnerName()
+    {
+      if (!HasWinner())
+        return string.Empty;
+
+      if (ScorePlayer1 == Rules.MaxWins)
+        return Player1Name;
+
+      return Player2Name;
     }
   }
 }

@@ -24,11 +24,11 @@ namespace GamesOfDrones.Engine.Tests
     public void AddMove_ValidMove_MoveExists()
     {
       //Arrange
-      int maxWins     = 3;
-      Move move1      = new Move("Rock");
-      Move move2      = new Move("Scissors");
-      Move move3      = new Move("Paper");
-      GameRules rules = new GameRules(maxWins);
+      int       maxWins = 3;
+      Move      move1   = new Move("Rock");
+      Move      move2   = new Move("Scissors");
+      Move      move3   = new Move("Paper");
+      GameRules rules   = new GameRules(maxWins);
 
       move1.AddKill(move2.Name);
       move2.AddKill(move3.Name);
@@ -53,11 +53,11 @@ namespace GamesOfDrones.Engine.Tests
     public void AddMove_MoveAlreadyAdded_ThrowElementAlreadyExistsException()
     {
       //Arrange
-      int maxWins = 3;
-      Move move1 = new Move("Rock");
-      Move move2 = new Move("Scissors");
-      Move move3 = new Move("Paper");
-      GameRules rules = new GameRules(maxWins);
+      int       maxWins = 3;
+      Move      move1   = new Move("Rock");
+      Move      move2   = new Move("Scissors");
+      Move      move3   = new Move("Paper");
+      GameRules rules   = new GameRules(maxWins);
 
       move1.AddKill(move2.Name);
       move2.AddKill(move3.Name);
@@ -76,11 +76,11 @@ namespace GamesOfDrones.Engine.Tests
     public void GetMove_MoveNotAdded_ThrowElementNotFoundException()
     {
       //Arrange
-      int maxWins     = 3;
-      Move move1      = new Move("Rock");
-      Move move2      = new Move("Scissors");
-      Move move3      = new Move("Paper");
-      GameRules rules = new GameRules(maxWins);
+      int       maxWins = 3;
+      Move      move1   = new Move("Rock");
+      Move      move2   = new Move("Scissors");
+      Move      move3   = new Move("Paper");
+      GameRules rules   = new GameRules(maxWins);
 
       move1.AddKill(move2.Name);
       move2.AddKill(move3.Name);

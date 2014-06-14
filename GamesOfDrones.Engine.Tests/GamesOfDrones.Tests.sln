@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesOfDrones.Engine.Tests", "GamesOfDrones.Engine.Tests.csproj", "{DF4E24F5-C6CF-42A7-814C-466B24BB15DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfDrones.Engine", "..\GameOfDrones.Engine\GameOfDrones.Engine.csproj", "{14E7B428-48A6-4585-A383-1913D7254859}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF4E24F5-C6CF-42A7-814C-466B24BB15DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF4E24F5-C6CF-42A7-814C-466B24BB15DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF4E24F5-C6CF-42A7-814C-466B24BB15DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF4E24F5-C6CF-42A7-814C-466B24BB15DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14E7B428-48A6-4585-A383-1913D7254859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14E7B428-48A6-4585-A383-1913D7254859}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14E7B428-48A6-4585-A383-1913D7254859}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14E7B428-48A6-4585-A383-1913D7254859}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

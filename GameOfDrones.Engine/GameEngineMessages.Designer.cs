@@ -115,7 +115,7 @@ namespace GameOfDrones.Engine {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The name of the can&apos;t be empty..
+        ///   Looks up a localized string similar to The name of the move can&apos;t be empty..
         /// </summary>
         internal static string PlayEmptyMoveNameError {
             get {
@@ -129,6 +129,15 @@ namespace GameOfDrones.Engine {
         internal static string PlayerNameEmptyError {
             get {
                 return ResourceManager.GetString("PlayerNameEmptyError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The game already has winner..
+        /// </summary>
+        internal static string PlayHasWinnerError {
+            get {
+                return ResourceManager.GetString("PlayHasWinnerError", resourceCulture);
             }
         }
         

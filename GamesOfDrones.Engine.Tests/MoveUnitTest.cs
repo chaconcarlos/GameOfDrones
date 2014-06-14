@@ -25,7 +25,7 @@ namespace GamesOfDrones.Engine.Tests
       //Arrange
       string moveName = "Rock";
       string killName = string.Empty;
-      Move newMove    = new Move(moveName);
+      Move   newMove  = new Move(moveName);
 
       //Assert
       newMove.AddKill(killName);
@@ -37,7 +37,7 @@ namespace GamesOfDrones.Engine.Tests
     {
       //Arrange
       string moveName = "Rock";
-      Move newMove    = new Move(moveName);
+      Move   newMove  = new Move(moveName);
 
       //Assert
       newMove.AddKill(moveName);
@@ -50,7 +50,7 @@ namespace GamesOfDrones.Engine.Tests
       //Arrange
       string moveName        = "Rock";
       string againstMoveName = string.Empty;
-      Move newMove           = new Move(moveName);
+      Move   newMove         = new Move(moveName);
       
       newMove.AddKill(againstMoveName);
 
@@ -64,7 +64,7 @@ namespace GamesOfDrones.Engine.Tests
       //Arrange
       string moveName        = "Rock";
       string againstMoveName = "Scissors";
-      Move newMove           = new Move(moveName);
+      Move   newMove         = new Move(moveName);
       
       newMove.AddKill(againstMoveName);
 
@@ -80,7 +80,7 @@ namespace GamesOfDrones.Engine.Tests
     {
       //Arrange
       string moveName = "Rock";
-      Move newMove    = new Move(moveName);
+      Move   newMove  = new Move(moveName);
 
       //Act
       PlayResult result = newMove.Play(moveName);
@@ -95,7 +95,7 @@ namespace GamesOfDrones.Engine.Tests
       //Arrange
       string moveName        = "Rock";
       string againstMoveName = "Paper";
-      Move newMove           = new Move(moveName);
+      Move   newMove         = new Move(moveName);
 
       //Act
       PlayResult result = newMove.Play(againstMoveName);
@@ -110,7 +110,7 @@ namespace GamesOfDrones.Engine.Tests
       //Arrange
       string moveName        = "Rock";
       string againstMoveName = "Paper";
-      Move move              = new Move(moveName);
+      Move   move            = new Move(moveName);
 
       move.AddKill(againstMoveName);
 
