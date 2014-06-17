@@ -117,40 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AddKillMoveSameNameAssMoveError" xml:space="preserve">
-    <value>The move can't kill itself.</value>
-  </data>
-  <data name="CreateGameEmptyMovesError" xml:space="preserve">
-    <value>Can't create game. The moves list is empty, and it should have at least one move.</value>
-  </data>
-  <data name="CreateMoveEmptyNameError" xml:space="preserve">
-    <value>Can't create move. The move name can't be null or empty.</value>
-  </data>
-  <data name="CreateRulesMaxWinsZeroError" xml:space="preserve">
-    <value>The number of max wins must be greater than zero.</value>
-  </data>
-  <data name="MoveAlreadyExitsError" xml:space="preserve">
-    <value>The move '{0}' already exists in the current rules.</value>
-  </data>
-  <data name="MoveNotFoundError" xml:space="preserve">
-    <value>The move '{0}' doesn't exists.</value>
-  </data>
-  <data name="PlayEmptyMoveNameError" xml:space="preserve">
-    <value>The name of the move can't be empty.</value>
-  </data>
-  <data name="PlayerNameEmptyError" xml:space="preserve">
-    <value>The player name can't be empty.</value>
-  </data>
-  <data name="PlayResultNotSupported" xml:space="preserve">
-    <value>The PlayResult is not supported by this implementation of Game Of Drones.</value>
-  </data>
-  <data name="PlayHasWinnerError" xml:space="preserve">
-    <value>The game already has winner.</value>
-  </data>
-  <data name="GameNotFoundError" xml:space="preserve">
-    <value>The game {0} doesn't exists.</value>
-  </data>
-  <data name="FinishGameNotStartedError" xml:space="preserve">
-    <value>The Game {0} can't be finished. Is not started.</value>
+  <data name="FactoryNotInitializedError" xml:space="preserve">
+    <value>The factory must be initialized to be used.</value>
   </data>
 </root>

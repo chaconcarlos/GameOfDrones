@@ -18,6 +18,12 @@ namespace GameOfDronesWebUI
           url: "{controller}/{action}/{id}",
           defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
       );
+
+      //routes.MapRoute(
+      //    name: "Play",
+      //    url: "{controller}/{action}/{id}",
+      //    defaults: new { controller = "Game", action = "play"}
+      //);
     }
   }
 }

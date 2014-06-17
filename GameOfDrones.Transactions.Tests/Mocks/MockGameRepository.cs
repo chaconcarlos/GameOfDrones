@@ -12,18 +12,18 @@ namespace GameOfDrones.Transactions.Tests
   /// </summary>
   class MockGameRepository : IGameRepository
   {
-    private Game m_savedGame;
+    private GameData m_savedGameData;
 
     /// <summary>
     /// Returns the played games of a given player.
     /// </summary>
     /// <param name="playerName">Name of the player.</param>
     /// <returns>Collection of games played by the given player.</returns>
-    public IEnumerable<Engine.Game> getPlayedGames(string playerName)
+    public IEnumerable<Engine.GameData> GetPlayedGames(string playerName)
     {
-      ICollection<Game> games = new List<Game>();
+      ICollection<GameData> games = new List<GameData>();
 
-      games.Add(m_savedGame);
+      games.Add(m_savedGameData);
 
       return games;
     }
@@ -31,10 +31,10 @@ namespace GameOfDrones.Transactions.Tests
     /// <summary>
     /// Persists the data of the given game.
     /// </summary>
-    /// <param name="game">The game to persist.</param>
-    public void SaveGame(Engine.Game game)
+    /// <param name="gameData">The game data to persist.</param>
+    public void SaveGameData(Engine.GameData gameData)
     {
-      m_savedGame = game;
+      m_savedGameData = gameData;
     }
   }
 }

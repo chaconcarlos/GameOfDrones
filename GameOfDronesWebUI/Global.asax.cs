@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GameOfDrones.Data;
+using GamesOfDrones.Data.ADO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -22,6 +24,8 @@ namespace GameOfDronesWebUI
       FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
       RouteConfig.RegisterRoutes(RouteTable.Routes);
       BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+      RepositoryFactory.InitializeFactory(new AdoRepositoryFactory());
     }
   }
 }

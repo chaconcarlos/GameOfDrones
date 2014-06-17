@@ -97,6 +97,24 @@ namespace GameOfDrones.Engine {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The Game {0} can&apos;t be finished. Is not started..
+        /// </summary>
+        internal static string FinishGameNotStartedError {
+            get {
+                return ResourceManager.GetString("FinishGameNotStartedError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The game {0} doesn&apos;t exists..
+        /// </summary>
+        internal static string GameNotFoundError {
+            get {
+                return ResourceManager.GetString("GameNotFoundError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The move &apos;{0}&apos; already exists in the current rules..
         /// </summary>
         internal static string MoveAlreadyExitsError {

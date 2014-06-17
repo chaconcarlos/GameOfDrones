@@ -10,9 +10,27 @@ namespace GameOfDronesWebUI
     public static void Register(HttpConfiguration config)
     {
       config.Routes.MapHttpRoute(
-          name: "DefaultApi",
-          routeTemplate: "api/{controller}/{id}",
-          defaults: new { id = RouteParameter.Optional }
+        name: "game",
+        routeTemplate: "api/{controller}/{id}",
+        defaults: new {controller = "Game", id = RouteParameter.Optional }
+      );
+
+      config.Routes.MapHttpRoute(
+        name: "startGame",
+        routeTemplate: "api/game/start/id",
+        defaults: new {controller = "Game", action = "Start"}
+      );
+
+      config.Routes.MapHttpRoute(
+        name: "play",
+        routeTemplate: "api/game/makeplay/id",
+        defaults: new {controller = "Game", action = "play"}
+      );
+
+      config.Routes.MapHttpRoute(
+        name: "moves",
+        routeTemplate: "api/game/moves/{sessionId}",
+        defaults: new {controller = "Game", action = "moves"}
       );
     }
   }

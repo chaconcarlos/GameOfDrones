@@ -1,0 +1,19 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+  <meta name="viewport" content="width=device-width" />
+  <title>Game Of Drones</title>
+  <script type="text/javascript" src="../../Scripts/knockout-2.1.0.js"></script>
+  <script type="text/javascript" src="../../Scripts/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="../../Scripts/GameOfDrones/game.js"></script>
+</head>
+<body>
+  <div>
+    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+    </asp:ContentPlaceHolder>
+  </div>
+</body>
+</html>

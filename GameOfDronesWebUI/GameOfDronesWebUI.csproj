@@ -123,6 +123,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\GameController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -186,6 +187,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\GameOfDrones\game.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -201,6 +203,7 @@
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Home\Game.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -212,6 +215,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\Game.Master" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -219,6 +223,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GameOfDrones.Data\GameOfDrones.Data.csproj">
+      <Project>{2efbb3a5-6bc0-4a1c-87a5-993ad9cfeab2}</Project>
+      <Name>GameOfDrones.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameOfDrones.Engine\GameOfDrones.Engine.csproj">
+      <Project>{14e7b428-48a6-4585-a383-1913d7254859}</Project>
+      <Name>GameOfDrones.Engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameOfDrones.Transactions\GameOfDrones.Transactions.csproj">
+      <Project>{ddba7de0-f9bd-45e5-aa69-f335df3299b8}</Project>
+      <Name>GameOfDrones.Transactions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GamesOfDrones.Data.ADO\GameOfDrones.Data.ADO.csproj">
+      <Project>{5a6cbc8f-1854-4bc4-b31a-165df45114b2}</Project>
+      <Name>GameOfDrones.Data.ADO</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

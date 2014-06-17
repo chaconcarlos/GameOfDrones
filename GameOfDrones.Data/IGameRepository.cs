@@ -16,12 +16,12 @@ namespace GameOfDrones.Data
     /// </summary>
     /// <param name="playerName">Name of the player.</param>
     /// <returns>Collection of games played by the given player.</returns>
-    IEnumerable<Game> getPlayedGames(string playerName);
+    IEnumerable<GameData> GetPlayedGames(string playerName);
 
     /// <summary>
     /// Persists the data of the given game.
     /// </summary>
-    /// <param name="game">The game to persist.</param>
-    void SaveGame(Game game);
+    /// <param name="gameData">The game to persist.</param>
+    void SaveGameData(GameData gameData);
   }
 }

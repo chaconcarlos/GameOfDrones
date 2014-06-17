@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GameOfDrones.Transactions {
+namespace GameOfDrones.Data {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace GameOfDrones.Transactions {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class GameTransactionMessages {
+    internal class GameDataMessages {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal GameTransactionMessages() {
+        internal GameDataMessages() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace GameOfDrones.Transactions {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GameOfDrones.Transactions.GameTransactionMessages", typeof(GameTransactionMessages).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GameOfDrones.Data.GameDataMessages", typeof(GameDataMessages).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,29 +61,11 @@ namespace GameOfDrones.Transactions {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The player name can&apos;t be empty..
+        ///   Looks up a localized string similar to The factory must be initialized to be used..
         /// </summary>
-        internal static string PlayerNameIsEmptyError {
+        internal static string FactoryNotInitializedError {
             get {
-                return ResourceManager.GetString("PlayerNameIsEmptyError", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The data repository needed for creating the transaction can&apos;t be null..
-        /// </summary>
-        internal static string RepositoryIsNullError {
-            get {
-                return ResourceManager.GetString("RepositoryIsNullError", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Only games with a winner can be saved..
-        /// </summary>
-        internal static string SaveGameDoesNotHaveWinnerError {
-            get {
-                return ResourceManager.GetString("SaveGameDoesNotHaveWinnerError", resourceCulture);
+                return ResourceManager.GetString("FactoryNotInitializedError", resourceCulture);
             }
         }
     }

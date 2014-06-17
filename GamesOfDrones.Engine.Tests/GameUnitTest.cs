@@ -94,6 +94,7 @@ namespace GamesOfDrones.Engine.Tests
       //Assert
       Assert.AreEqual(1,         game.ScorePlayer1);
       Assert.AreEqual("player1", playWinnerName);
+      Assert.AreEqual("player1", game.LastPlayWinnerName);
     }
 
     [TestMethod]
@@ -122,6 +123,7 @@ namespace GamesOfDrones.Engine.Tests
       //Assert
       Assert.AreEqual(1,         game.ScorePlayer2);
       Assert.AreEqual("player2", playWinnerName);
+      Assert.AreEqual("player2", game.LastPlayWinnerName);
     }
 
     [TestMethod]
@@ -151,6 +153,7 @@ namespace GamesOfDrones.Engine.Tests
       Assert.AreEqual(0,            game.ScorePlayer1);
       Assert.AreEqual(0,            game.ScorePlayer2);
       Assert.AreEqual(string.Empty, playWinnerName);
+      Assert.AreEqual(string.Empty, game.LastPlayWinnerName);
     }
 
     [TestMethod]
@@ -180,7 +183,7 @@ namespace GamesOfDrones.Engine.Tests
 
       //Assert
       Assert.AreEqual(true,      game.HasWinner());
-      Assert.AreEqual("player1", game.getWinnerName());
+      Assert.AreEqual("player1", game.WinnerName);
     }
 
     [TestMethod]
@@ -209,8 +212,8 @@ namespace GamesOfDrones.Engine.Tests
       game.Play(move3.Name, move2.Name);
 
       //Assert
-      Assert.AreEqual(true, game.HasWinner());
-      Assert.AreEqual("player2", game.getWinnerName());
+      Assert.AreEqual(true,      game.HasWinner());
+      Assert.AreEqual("player2", game.WinnerName);
     }
 
     [TestMethod]
@@ -239,7 +242,7 @@ namespace GamesOfDrones.Engine.Tests
 
       //Assert
       Assert.AreEqual(false,        game.HasWinner());
-      Assert.AreEqual(string.Empty, game.getWinnerName());
+      Assert.AreEqual(string.Empty, game.WinnerName);
     }
 
     [TestMethod]

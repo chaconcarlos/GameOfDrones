@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfDrones.Engine", "GameOfDrones.Engine\GameOfDrones.Engine.csproj", "{14E7B428-48A6-4585-A383-1913D7254859}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesOfDrones.Engine.Tests", "GamesOfDrones.Engine.Tests\GamesOfDrones.Engine.Tests.csproj", "{DF4E24F5-C6CF-42A7-814C-466B24BB15DB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfDrones.Engine.Tests", "GamesOfDrones.Engine.Tests\GameOfDrones.Engine.Tests.csproj", "{DF4E24F5-C6CF-42A7-814C-466B24BB15DB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfDrones.Exceptions", "GameOfDrones.Exceptions\GameOfDrones.Exceptions.csproj", "{D559CD79-AA36-46CB-BD2D-689EA8ABF778}"
 EndProject
@@ -14,6 +14,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfDrones.Data", "GameOfDrones.Data\GameOfDrones.Data.csproj", "{2EFBB3A5-6BC0-4A1C-87A5-993AD9CFEAB2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfDronesWebUI", "GameOfDronesWebUI\GameOfDronesWebUI.csproj", "{4D601E47-761F-480E-B351-ABD178C4C8F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfDrones.Data.ADO", "GamesOfDrones.Data.ADO\GameOfDrones.Data.ADO.csproj", "{5A6CBC8F-1854-4BC4-B31A-165DF45114B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfDrones.Data.Tests", "GameOfDrones.Data.Tests\GameOfDrones.Data.Tests.csproj", "{6995D577-A8DF-4F47-B526-1447E6BACE49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +53,14 @@ Global
 		{4D601E47-761F-480E-B351-ABD178C4C8F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D601E47-761F-480E-B351-ABD178C4C8F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D601E47-761F-480E-B351-ABD178C4C8F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A6CBC8F-1854-4BC4-B31A-165DF45114B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A6CBC8F-1854-4BC4-B31A-165DF45114B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A6CBC8F-1854-4BC4-B31A-165DF45114B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A6CBC8F-1854-4BC4-B31A-165DF45114B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6995D577-A8DF-4F47-B526-1447E6BACE49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6995D577-A8DF-4F47-B526-1447E6BACE49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6995D577-A8DF-4F47-B526-1447E6BACE49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6995D577-A8DF-4F47-B526-1447E6BACE49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

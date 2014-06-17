@@ -20,9 +20,12 @@ namespace GameOfDrones.Transactions
       /// Creates an instance of the RegisterGameResult class.
       /// </summary>
       /// <param name="repository">The game data repository.</param>
-      /// <param name="game">The game to register.</param>
+      /// <param name="gameData">The game to register.</param>
       public RegisterGameResult(IGameRepository repository, Game game)
       {
+        if (repository == null)
+          throw new ArgumentException(GameTransactionMessages.RepositoryIsNullError);
+
         this.m_repository = repository;
         this.m_game       = game;
       }
@@ -36,7 +39,7 @@ namespace GameOfDrones.Transactions
           throw new InvalidOperationException(
             GameTransactionMessages.SaveGameDoesNotHaveWinnerError);
 
-        m_repository.SaveGame(m_game);
+        m_repository.SaveGameData(m_game.Data);
       }
     }
 }

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("GameOfDrones.Tests")]
+[assembly: AssemblyTitle("GameOfDrones.Data.ADO")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("GameOfDrones.Tests")]
+[assembly: AssemblyProduct("GameOfDrones.Data.ADO")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("b9972c3c-9efe-472b-8bbb-6e4e5590bea8")]
+[assembly: Guid("153b5ca0-ad69-462a-a03f-c312e47a72b7")]
 
 // Version information for an assembly consists of the following four values:
 //

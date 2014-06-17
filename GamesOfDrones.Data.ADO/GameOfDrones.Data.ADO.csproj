@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D559CD79-AA36-46CB-BD2D-689EA8ABF778}</ProjectGuid>
+    <ProjectGuid>{5A6CBC8F-1854-4BC4-B31A-165DF45114B2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GameOfDrones.Exceptions</RootNamespace>
-    <AssemblyName>GameOfDrones.Exceptions</AssemblyName>
+    <RootNamespace>GameOfDrones.Data.ADO</RootNamespace>
+    <AssemblyName>GamesOfDrones.Data.ADO</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,8 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -39,10 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ElementAlreadyExistsException.cs" />
-    <Compile Include="ElementNotFoundException.cs" />
-    <Compile Include="GameNotStartedException.cs" />
+    <Compile Include="AdoGameRepository.cs" />
+    <Compile Include="AdoRepositoryFactory.cs" />
+    <Compile Include="GameEngineContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GameOfDrones.Data\GameOfDrones.Data.csproj">
+      <Project>{2efbb3a5-6bc0-4a1c-87a5-993ad9cfeab2}</Project>
+      <Name>GameOfDrones.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameOfDrones.Engine\GameOfDrones.Engine.csproj">
+      <Project>{14e7b428-48a6-4585-a383-1913d7254859}</Project>
+      <Name>GameOfDrones.Engine</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

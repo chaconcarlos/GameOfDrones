@@ -16,6 +16,6 @@ namespace GameOfDrones.Transactions
     /// Gets the result of the transaction.
     /// </summary>
     /// <returns>The result of the transaction.</returns>
-    public ResultType GetResult();
+    ResultType GetResult();
   }
 }

@@ -44,10 +44,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GameTransactionMessages.resx</DependentUpon>
     </Compile>
+    <Compile Include="GetPlayedGamesByPlayer.cs" />
     <Compile Include="IScalarTransaction.cs" />
     <Compile Include="ITransaction.cs" />
     <Compile Include="RegisterGameResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransactionFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GameOfDrones.Data\GameOfDrones.Data.csproj">

@@ -34,7 +34,9 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GetPlayedGamesByPlayerUnitTest.cs" />
     <Compile Include="Mocks\MockGameRepository.cs" />
+    <Compile Include="Mocks\MockRepositoryFactory.cs" />
     <Compile Include="RegisterGameResultUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

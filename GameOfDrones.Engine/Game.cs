@@ -8,13 +8,21 @@ namespace GameOfDrones.Engine
   /// <summary>
   /// Represents a game of drones game.
   /// </summary>
-  public class Game : IGame
+  public class Game
   {
-    private int       m_scorePlayer1 = 0;
-    private int       m_scorePlayer2 = 0;
-    private string    m_player1Name;
-    private string    m_player2Name;
+    private GameData  m_data;
     private GameRules m_rules;
+
+    /// <summary>
+    /// Gets the game Id.
+    /// </summary>
+    public int Id
+    {
+      get
+      {
+        return m_data.Id;
+      }
+    }
 
     /// <summary>
     /// Gets the score for player 1.
@@ -23,7 +31,7 @@ namespace GameOfDrones.Engine
     {
       get
       {
-        return m_scorePlayer1;
+        return m_data.ScorePlayer1;
       }
     }
 
@@ -34,7 +42,7 @@ namespace GameOfDrones.Engine
     {
       get
       {
-        return m_scorePlayer2;
+        return m_data.ScorePlayer2;
       }
     }
 
@@ -45,7 +53,7 @@ namespace GameOfDrones.Engine
     {
       get 
       { 
-        return m_player1Name; 
+        return m_data.Player1Name; 
       }
     }
 
@@ -56,19 +64,56 @@ namespace GameOfDrones.Engine
     {
       get
       {
-        return m_player2Name;
+        return m_data.Player2Name;
       }
     }
 
     /// <summary>
-    /// Gets the rules for the current game.
+    /// Gets the name of the player that won the last play.
     /// </summary>
-    public GameRules Rules
+    public string LastPlayWinnerName
     {
       get 
       { 
-        return m_rules; 
+        return m_data.LastPlayWinnerName; 
       }
+    }
+
+    /// <summary>
+    /// Gets the name of the game winner.
+    /// </summary>
+    public string WinnerName
+    {
+      get 
+      { 
+        return m_data.WinnerName; 
+      }
+    }
+
+    /// <summary>
+    /// Gets the list of available moves.
+    /// </summary>
+    public ICollection<string> AvailableMoves
+    {
+      get
+      {
+        return m_rules.GetMoves();
+      }
+    }
+
+    public GameData Data
+    {
+      get
+      {
+        return m_data;
+      }
+    }
+
+    /// <summary>
+    /// Creates an instance of the Game class.
+    /// </summary>
+    public Game()
+    {
     }
 
     /// <summary>
@@ -85,9 +130,10 @@ namespace GameOfDrones.Engine
       if ((string.IsNullOrEmpty(player1Name)) || (string.IsNullOrEmpty(player2Name)))
         throw new ArgumentException(GameEngineMessages.PlayerNameEmptyError);
 
-      this.m_player1Name = player1Name;
-      this.m_player2Name = player2Name;
-      this.m_rules       = rules;
+      this.m_data             = new GameData();
+      this.m_data.Player1Name = player1Name;
+      this.m_data.Player2Name = player2Name;
+      this.m_rules            = rules;
     }
 
     /// <summary>
@@ -105,22 +151,32 @@ namespace GameOfDrones.Engine
       if ((string.IsNullOrEmpty(player1MoveName)) || (string.IsNullOrEmpty(player2MoveName)))
         throw new ArgumentException(GameEngineMessages.PlayEmptyMoveNameError);
 
-      Move player1Move  = Rules.GetMove(player1MoveName);
-      PlayResult result = player1Move.Play(player2MoveName);
+      Move       player1Move    = m_rules.GetMove(player1MoveName);
+      PlayResult result         = player1Move.Play(player2MoveName);
+      string     playWinnerName = string.Empty;
 
       switch (result)
       {
         case PlayResult.Draw:
-          return string.Empty;
+          break;
         case PlayResult.Win:
-          m_scorePlayer1++;
-          return Player1Name;
+          m_data.ScorePlayer1++;
+          playWinnerName = Player1Name;
+          break;
         case PlayResult.Lose:
-          m_scorePlayer2++;
-          return Player2Name;
+          m_data.ScorePlayer2++;
+          playWinnerName = Player2Name;
+          break;
         default:
           throw new NotSupportedException(GameEngineMessages.PlayResultNotSupported);
       }
+
+      if (HasWinner())
+        m_data.WinnerName = playWinnerName;
+
+      m_data.LastPlayWinnerName = playWinnerName;
+
+      return playWinnerName;
     }
 
     /// <summary>
@@ -129,26 +185,10 @@ namespace GameOfDrones.Engine
     /// <returns>True, if the game has a winner. Otherwise, false.</returns>
     public bool HasWinner()
     {
-      if ((ScorePlayer1 == this.Rules.MaxWins) || (ScorePlayer2 == this.Rules.MaxWins))
+      if ((ScorePlayer1 == this.m_rules.MaxWins) || (ScorePlayer2 == this.m_rules.MaxWins))
         return true;
 
       return false;
-    }
-
-    /// <summary>
-    /// Returns the name of the winner.
-    /// </summary>
-    /// <returns>The name of the winner. If there is no winner yet,
-    /// returns empty.</returns>
-    public string getWinnerName()
-    {
-      if (!HasWinner())
-        return string.Empty;
-
-      if (ScorePlayer1 == Rules.MaxWins)
-        return Player1Name;
-
-      return Player2Name;
     }
   }
 }

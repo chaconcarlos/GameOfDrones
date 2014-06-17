@@ -40,9 +40,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Game.cs" />
+    <Compile Include="GameData.cs" />
     <Compile Include="GameEngine.cs" />
+    <Compile Include="GameSessionManager.cs" />
     <Compile Include="GameRules.cs" />
-    <Compile Include="IGame.cs" />
     <Compile Include="Move.cs" />
     <Compile Include="PlayResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
